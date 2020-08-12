@@ -1,9 +1,18 @@
+$blue: hsl(223, 87%, 63%);
+$pale-blue:hsl(223, 100%, 88%);
+$light-red:hsl(354, 100%, 66%);
+$gray:hsl(0, 0%, 59%);
+$very-dark-blue:hsl(209, 33%, 12%);
+$font-family:'Libre Franklin',
+sans-serif;
 .content-col {
     padding: 5% 10%;
     text-align: center;
-    .logo {
-        width: 100px;
-        margin-left: 43%;
+    .logo-cont {
+        justify-content: center;
+        .logo {
+            width: 100px;
+        }
     }
     .illust {
         margin-top: 2%;
@@ -11,16 +20,22 @@
     }
     .notify-btn {
         margin: 3% 2% 6% 2% !important;
-        width: 100%;
-        height: 50px;
-        border-radius: 25px !important;
-    }
-    .email-input {
-        margin: 3% 2% 1% 2% !important;
+        background-color: $blue;
+        color: white;
         width: 90%;
         height: 50px;
         border-radius: 25px !important;
+        &:hover {
+            background-color: $pale-blue;
+            color: white;
+        }
+    }
+    .email-input {
+        margin: 3% 2% 1% 2% !important;
+        height: 50px;
+        border-radius: 25px !important;
         font-size: 20px;
+        padding-left: 3%;
     }
     p {
         color: #bf1650;
@@ -32,7 +47,7 @@
         }
     }
     h1 {
-        font-family: "Libre Franklin", sans-serif;
+        font-family: $font-family;
         font-size: 60px;
         font-weight: 400;
         color: hsl(0, 0%, 59%);
@@ -42,10 +57,23 @@
         color: hsl(209, 33%, 12%);
     }
     h4 {
-        font-family: "Libre Franklin", sans-serif;
+        font-family: $font-family;
         font-size: 20px;
         font-weight: 400;
         color: hsl(209, 33%, 12%);
+    }
+    .social-cont {
+        margin: 3% auto;
+        justify-content: center;
+        .social-icon {
+            color: $blue !important;
+            padding: 1%;
+            border-radius: 20px;
+            &:hover {
+                background-color: $blue !important;
+                color: white !important;
+            }
+        }
     }
 }
 
@@ -55,6 +83,12 @@
         top: 20px;
     }
     .email-input {
-        width: 95%;
+        width: 90% !important;
+    }
+}
+
+@media screen and (max-width:789px) {
+    .email-input {
+        width: 90% !important;
     }
 }

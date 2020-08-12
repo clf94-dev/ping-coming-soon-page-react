@@ -14,11 +14,9 @@ function Form(){
           <Grid item md={9} xs={12}>
            <form onSubmit={handleSubmit(onSubmit)}>
                <input className="email-input" placeholder="Your email address..." name="email" ref={register({
-                   required:true, pattern:{
-                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                
-                  
-                   }
+                   required:true, pattern:/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+            
+                 
                })}
                />
             

@@ -4,9 +4,12 @@
   text-align: center;
 }
 
-.content-col .logo {
+.content-col .logo-cont {
+  justify-content: center;
+}
+
+.content-col .logo-cont .logo {
   width: 100px;
-  margin-left: 43%;
 }
 
 .content-col .illust {
@@ -16,17 +19,24 @@
 
 .content-col .notify-btn {
   margin: 3% 2% 6% 2% !important;
-  width: 100%;
+  background-color: #4f7df3;
+  color: white;
+  width: 90%;
   height: 50px;
   border-radius: 25px !important;
 }
 
+.content-col .notify-btn:hover {
+  background-color: #c2d3ff;
+  color: white;
+}
+
 .content-col .email-input {
   margin: 3% 2% 1% 2% !important;
-  width: 90%;
   height: 50px;
   border-radius: 25px !important;
   font-size: 20px;
+  padding-left: 3%;
 }
 
 .content-col p {
@@ -59,12 +69,34 @@
   color: #151f29;
 }
 
+.content-col .social-cont {
+  margin: 3% auto;
+  justify-content: center;
+}
+
+.content-col .social-cont .social-icon {
+  color: #4f7df3 !important;
+  padding: 1%;
+  border-radius: 20px;
+}
+
+.content-col .social-cont .social-icon:hover {
+  background-color: #4f7df3 !important;
+  color: white !important;
+}
+
 @media screen and (min-width: 789px) {
   .notify-btn {
     position: relative;
     top: 20px;
   }
   .email-input {
-    width: 95%;
+    width: 90% !important;
+  }
+}
+
+@media screen and (max-width: 789px) {
+  .email-input {
+    width: 90% !important;
   }
 }
